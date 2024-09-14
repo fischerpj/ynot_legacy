@@ -7,6 +7,15 @@ categories: [news]
 
 This is the first post in a Quarto blog. Welcome!
 
+```         
+> curl -O https://github.com/fischerpj/ynot/blob/main/static/toto.log
+
+curl -H 'Authorization: token INSERTACCESSTOKENHERE' \
+  -H 'Accept: application/vnd.github.v3.raw' \
+  -O \
+  -L https://api.github.com/repos/owner/repo/contents/path
+```
+
 ![](thumbnail.jpg)
 
 Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.

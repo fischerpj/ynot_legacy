@@ -176,6 +176,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This is the first post in a Quarto blog. Welcome!</p>
+<pre><code>&gt; curl -O https://github.com/fischerpj/ynot/blob/main/static/toto.log
+
+curl -H 'Authorization: token INSERTACCESSTOKENHERE' \
+  -H 'Accept: application/vnd.github.v3.raw' \
+  -O \
+  -L https://api.github.com/repos/owner/repo/contents/path</code></pre>
 <p><img src="thumbnail.jpg" class="img-fluid"></p>
 <p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
 
