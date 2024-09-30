@@ -1,0 +1,12 @@
+---
+title: "CKedit"
+author: "granPiero"
+date: "2024-09-30"
+categories: [code]
+image: "image.jpg"
+format:
+  html:
+    include-in-header: "include-in-header.html"
+---
+
+zero error blog
