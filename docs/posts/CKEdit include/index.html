@@ -177,6 +177,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>zero error blog</p>
+<p>### Abstract</p>
+<p>Steps to Embed CKEditor 5 in this wbepage:</p>
+<p>1. Include CKEditor 5 Script Tag in Head of this HTML : Add the CKEditor 5 library in the \&lt;head\&gt; section of this HTML file using the yaml includes: in_header: static/html/header.html</p>
+<p>2. Create a **Textarea**: Add a \&lt;textarea\&gt; element where you want the editor to appear.</p>
+<p>3. **Initialize** CKEditor 5: Use inline JavaScript to replace the \&lt;textarea\&gt; with CKEditor 5 instance.</p>
+<p>&lt;h1&gt;CKEditor 5 Example&lt;/h1&gt;</p>
+<!-- Textarea to be replaced by CKEditor 5 -->
+<p>&lt;textarea name=“content” id=“editor”&gt;</p>
+<p>&lt;p&gt;This is some default sample content.&lt;/p&gt;</p>
+<p>&lt;/textarea&gt;</p>
+<p>&lt;script&gt;</p>
+<p>// Initialize CKEditor 5</p>
+<p>InlineEditor</p>
+<p>.create(document.querySelector(‘#editor’))</p>
+<p>.catch(error =&gt; {</p>
+<p>console.error(error);</p>
+<p>});</p>
+<p>editor.model.document.on( ‘change:data’, () =&gt; {</p>
+<p>console.log( ‘The data has changed!’ );</p>
+<p>});</p>
+<p>&lt;/script&gt;</p>
 
 
 
