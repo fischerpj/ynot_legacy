@@ -91,7 +91,8 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
-<script src="https://cdn.ckeditor.com/ckeditor5/43.1.0/inline/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/43.1.1/inline/ckeditor.js"></script>
+<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.1.1/inline/ckeditor.css">
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -177,27 +178,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>zero error blog</p>
-<p>### Abstract</p>
-<p>Steps to Embed CKEditor 5 in this wbepage:</p>
-<p>1. Include CKEditor 5 Script Tag in Head of this HTML : Add the CKEditor 5 library in the \&lt;head\&gt; section of this HTML file using the yaml includes: in_header: static/html/header.html</p>
-<p>2. Create a **Textarea**: Add a \&lt;textarea\&gt; element where you want the editor to appear.</p>
-<p>3. **Initialize** CKEditor 5: Use inline JavaScript to replace the \&lt;textarea\&gt; with CKEditor 5 instance.</p>
-<p>&lt;h1&gt;CKEditor 5 Example&lt;/h1&gt;</p>
-<!-- Textarea to be replaced by CKEditor 5 -->
-<p>&lt;textarea name=“content” id=“editor”&gt;</p>
-<p>&lt;p&gt;This is some default sample content.&lt;/p&gt;</p>
-<p>&lt;/textarea&gt;</p>
-<p>&lt;script&gt;</p>
-<p>// Initialize CKEditor 5</p>
-<p>InlineEditor</p>
-<p>.create(document.querySelector(‘#editor’))</p>
-<p>.catch(error =&gt; {</p>
-<p>console.error(error);</p>
-<p>});</p>
-<p>editor.model.document.on( ‘change:data’, () =&gt; {</p>
-<p>console.log( ‘The data has changed!’ );</p>
-<p>});</p>
-<p>&lt;/script&gt;</p>
 
 
 
@@ -210,9 +190,18 @@ ul.task-list li input[type="checkbox"] {
 No matching items
 </div>
 </div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<textarea id="editor">  &lt;p&gt;Hello from CKEditor 5!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;script&gt;
+    ClassicEditor
+      .create(document.querySelector('#editor'))
+      .catch(error =&gt; {
+        console.error(error);
+      });
+      &lt;/script&gt;
+&lt;script id = "quarto-html-after-body" type="application/javascript"&gt;
 window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
+  const toggleBodyColorMode = (bsSheetEl) =&gt; {
     const mode = bsSheetEl.getAttribute("data-mode");
     const bodyEl = window.document.querySelector("body");
     if (mode === "dark") {
@@ -223,7 +212,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       bodyEl.classList.remove("quarto-dark");
     }
   }
-  const toggleBodyColorPrimary = () => {
+  const toggleBodyColorPrimary = () =&gt; {
     const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
     if (bsSheetEl) {
       toggleBodyColorMode(bsSheetEl);
@@ -293,7 +282,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
+  for (var i=0; i&lt;noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
       // use id or data attribute instead here
@@ -304,7 +293,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-  const findCites = (el) => {
+  const findCites = (el) =&gt; {
     const parentEl = el.parentElement;
     if (parentEl) {
       const cites = parentEl.dataset.cites;
@@ -321,7 +310,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
+  for (var i=0; i&lt;bibliorefs.length; i++) {
     const ref = bibliorefs[i];
     const citeInfo = findCites(ref);
     if (citeInfo) {
@@ -342,9 +331,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-</div> <!-- /content -->
+&lt;/script&gt;
+&lt;/div&gt; &lt;!-- /content --&gt;
 
+&lt;/body&gt;
 
-
-</body></html>
+&lt;/html&gt;</textarea></div></body></html>

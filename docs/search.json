@@ -25,6 +25,6 @@
     "href": "posts/CKEdit include/index.html",
     "title": "CKedit",
     "section": "",
-    "text": "zero error blog\n### Abstract\nSteps to Embed CKEditor 5 in this wbepage:\n1. Include CKEditor 5 Script Tag in Head of this HTML : Add the CKEditor 5 library in the \\<head\\> section of this HTML file using the yaml includes: in_header: static/html/header.html\n2. Create a **Textarea**: Add a \\<textarea\\> element where you want the editor to appear.\n3. **Initialize** CKEditor 5: Use inline JavaScript to replace the \\<textarea\\> with CKEditor 5 instance.\n<h1>CKEditor 5 Example</h1>\n\n<textarea name=“content” id=“editor”>\n<p>This is some default sample content.</p>\n</textarea>\n<script>\n// Initialize CKEditor 5\nInlineEditor\n.create(document.querySelector(‘#editor’))\n.catch(error => {\nconsole.error(error);\n});\neditor.model.document.on( ‘change:data’, () => {\nconsole.log( ‘The data has changed!’ );\n});\n</script>\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "zero error blog\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
